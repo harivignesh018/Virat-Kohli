@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Quality Selector</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: #ff0000;
+        }
+
+        #image-container {
+            margin-top: 20px;
+        }
+
+        #image {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #ff0000;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        #selection {
+            font-size: 16px;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        #button {
+            font-size: 16px;
+            padding: 10px 20px;
+            background-color: #ff0000;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        #button:hover {
+            background-color: #cc0000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Heart with Different Quality</h1>
+    <select id="selection">
+        <option value="144">144p</option>
+        <option value="480">480p</option>
+        <option value="720">720p</option>
+        <option value="1080">1080pHD</option>
+    </select>
+    <br>
+    <button id="button" onclick="cal()">Click Me</button>
+    <div id="image-container">
+        <img id="image" src="https://img.freepik.com/premium-vector/vector-illustration-heart-symbol-red-color-isolated-white-background_842925-86.jpg" alt="Heart Image">
+    </div>
+    <script>
+        function cal(){
+            let a = document.getElementById("selection").value;
+            let b = document.getElementById("image");
+            if(a == 144){
+                b.src = "https://img.freepik.com/premium-vector/vector-illustration-heart-symbol-red-color-isolated-white-background_842925-86.jpg";
+            }
+            else if(a == 480){
+                b.src = "https://cdn4.vectorstock.com/i/1000x1000/88/28/3d-heart-vector-1168828.jpg";
+            }
+            else if(a == 720){
+                b.src = "https://pngfre.com/wp-content/uploads/Real-Heart-16.png";
+            }
+            else{
+                b.src = "https://i.pinimg.com/736x/58/f5/29/58f5295e76b6bd5dbe0cc0c55a98ce5a.jpg";
+            }
+        }
+    </script>
+</body>
+</html>
+
